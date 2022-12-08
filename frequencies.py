@@ -3,13 +3,11 @@
 def frequencies(items):
     frequencies = {}
     # Your code goes here
-    for item in items:
-        counter = 1
+    for index in items:
+        counter = 0
         for search_item in items:
-            if item == search_item:
-                frequencies[item] = counter
-                counter+=1
+            if isinstance(index, str):
+                if str(index) == str(search_item):
+                    counter+=1
+                    frequencies[index] = counter
     return frequencies
-
-
-#print(frequencies(['0', 4,4,'4','d','d','e',0,'a','d','4']))
